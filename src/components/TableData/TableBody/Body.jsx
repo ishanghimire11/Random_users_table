@@ -10,11 +10,13 @@ function Body() {
 
 	if (searchData.length === searchInfo.zero) {
 		return (
-			<tr>
-				<td colSpan={10} className="text-center opacity-50">
+			<tbody>
+				<tr>
+					<td colSpan={10} className="text-center opacity-50">
           			No user found. Try again with different name
-				</td>
-			</tr>
+					</td>
+				</tr>
+			</tbody>
 		);
 	} else {
 		return sortedArray.map((data, index) => {

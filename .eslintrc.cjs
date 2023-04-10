@@ -22,7 +22,7 @@ module.exports = {
     indent: [ "error", "tab" ],
     semi: [ "error", "always" ],
     "no-alert": ["error"],
-    "no-console": ["off"],
+    "no-console": ["error", { allow: ["warn", "error"] }],
     "max-len": [ "error",
       {
         code: 175,
