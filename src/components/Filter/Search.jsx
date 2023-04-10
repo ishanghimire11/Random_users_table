@@ -19,18 +19,18 @@ function Search() {
         last.toLowerCase().includes(inputValue)
 			);
 		});
-		setSearchData(FilterData);
 		setFilterResultLength(FilterData.length);
 		if (inputValue === "") {
 			setSearchXmark(false);
 		}
+		return setSearchData(FilterData);
 	};
 
 	const handleSearchClear = () => {
-		setSearchValue("");
 		setSearchXmark(false);
 		setSearchData(userData);
 		setFilterResultLength(userData.length);
+		return setSearchValue("");
 	};
 
 	return (
