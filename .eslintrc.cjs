@@ -5,8 +5,7 @@ module.exports = {
     browser: true,
   },
   extends: [
-    "plugin:react/recommended",
-    // "airbnb",
+    "plugin:react/recommended"
   ],
   overrides: [
   ],
@@ -19,14 +18,8 @@ module.exports = {
   ],
   rules: {
     "react/react-in-jsx-scope": "off",
-    // "import/no-extraneous-dependencies": [
-    //   "error",
-    //   {
-    //     devDependencies: true,
-    //   },
-    // ],
     quotes: [ "error", "double" ],
-    indent: [ "error", 2 ],
+    indent: [ "error", "tab" ],
     semi: [ "error", "always" ],
     "no-alert": ["error"],
     "no-console": ["off"],
