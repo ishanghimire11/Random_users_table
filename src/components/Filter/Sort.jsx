@@ -14,7 +14,7 @@ function Sort() {
 		if (sortValue === descending) {
 			sorted = sorted.sort((a, b) => b.name.first.localeCompare(a.name.first));
 		}
-		setSortedArray(sorted);
+		return setSortedArray(sorted);
 	};
 
 	useEffect(() => {
