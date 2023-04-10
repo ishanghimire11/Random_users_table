@@ -1,8 +1,8 @@
 import { useEffect, useState, createContext } from "react";
-import Refresh from "../TopBar/Refresh";
-import Sort from "../Filter/Sort";
-import Heading from "../TableData/Headings";
-import Search from "../Filter/Search";
+import Refresh from "/src/components/TopBar/Refresh";
+import Sort from "/src/components/Filter/Sort";
+import Heading from "/src/components/TableData/TableHeading/Headings";
+import Search from "/src/components/Filter/Search";
 
 const BASE_URL = "https://randomuser.me/api/?results=10";
 export const UserContext = createContext(null);
@@ -26,7 +26,7 @@ function GetUser() {
       setSearchData(data.results);
       setSortedArray(data.results);
     } catch (error) {
-      console.error("error");
+      console.error(error);
     } finally {
       setLoading(false);
     }

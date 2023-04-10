@@ -1,5 +1,5 @@
 import { useEffect, useContext } from "react";
-import { UserContext } from "../RetrieveUser/GetUser";
+import { UserContext } from "/src/components/RetrieveUser/GetUser";
 
 function Sort() {
   const { searchData, setSortedArray, sortedArray } = useContext(UserContext);

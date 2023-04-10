@@ -1,26 +1,22 @@
 import { useState, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faXmark } from "@fortawesome/free-solid-svg-icons";
-import { UserContext } from "../RetrieveUser/GetUser";
+import { UserContext } from "/src/components/RetrieveUser/GetUser";
 
 function Search() {
   const [ searchValue, setSearchValue ] = useState("");
   const { userData, setSearchData } = useContext(UserContext);
-  const [ filteredResultLength, setFilterResultLength ] = useState(
-    userData.length,
-  );
+  const [ filteredResultLength, setFilterResultLength ] = useState(userData.length);
   const [ searchXMark, setSearchXmark ] = useState(false);
 
   const handleSearch = (inputValue) => {
     setSearchValue(inputValue);
     setSearchXmark(true);
     const FilterData = userData.filter((data) => {
-      const {
-        name: { first, last },
-      } = data;
+      const { name: { first, last } } = data;
       return (
-        first.toLowerCase().includes(inputValue)
-        || last.toLowerCase().includes(inputValue)
+        first.toLowerCase().includes(inputValue) ||
+        last.toLowerCase().includes(inputValue)
       );
     });
     setSearchData(FilterData);
@@ -63,11 +59,13 @@ function Search() {
           filteredResultLength === userData.length ? "hidden" : "block"
         }`}
       >
-        Showing &apos;
-        {filteredResultLength}
-        out of
-        {userData.length}
-        &apos;results
+        Showing
+        <span className="mx-2">
+          &apos;{filteredResultLength} out of
+          {userData.length}
+          &apos;
+        </span>
+        results
       </p>
     </div>
   );

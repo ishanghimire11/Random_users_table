@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { UserContext } from "../../RetrieveUser/GetUser";
+import { UserContext } from "/src/components/RetrieveUser/GetUser";
 
 function UserMap() {
   const { searchData, sortedArray } = useContext(UserContext);
