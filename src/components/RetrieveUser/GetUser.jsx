@@ -6,7 +6,7 @@ import Body from "/src/components/TableData/TableBody/Body";
 import TopBar from "src/components/TopBar/TopBar";
 import Loading from "src/components/Utils/Loading";
 
-const BASE_URL = "https://randomuser.me/api/?results=10";
+const BASE_URL = import.meta.env.VITE_URL;
 export const UserContext = createContext();
 
 function GetUser() {
