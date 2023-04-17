@@ -5,8 +5,7 @@ function Heading() {
 		<>
 			<thead className="uppercase border-gray-300 bg-stone-50 border-b-2 pl-2">
 				<tr>
-					<th className={`w-20 pl-4 ${headingStyles}`}>No.</th>
-					<th className={`w-72 ${headingStyles}`}>Name</th>
+					<th className={`w-72 ${headingStyles} pl-4`}>Name</th>
 					<th className={`w-28 ${headingStyles}`}>Gender</th>
 					<th className={`w-20 ${headingStyles}`}>Age</th>
 					<th className={`w-48 ${headingStyles}`}>Contact</th>
